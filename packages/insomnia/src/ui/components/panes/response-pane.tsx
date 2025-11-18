@@ -26,6 +26,7 @@ import { ResponseCookiesViewer } from '../viewers/response-cookies-viewer';
 import { ResponseHeadersViewer } from '../viewers/response-headers-viewer';
 import { ResponseTimelineViewer } from '../viewers/response-timeline-viewer';
 import { ResponseViewer } from '../viewers/response-viewer';
+import { ResponseCelebration } from '../animations/ResponseCelebration';
 import { BlankPane } from './blank-pane';
 import { Pane, PaneHeader } from './pane';
 import { PlaceholderResponsePane } from './placeholder-response-pane';
@@ -145,6 +146,14 @@ export const ResponsePane: FC<Props> = ({
   const cookieHeaders = getSetCookieHeaders(activeResponse.headers);
   return (
     <Pane type="response">
+      {/* Response Code Celebration Animations - MVP Feature */}
+      {activeResponse && (
+        <ResponseCelebration
+          key={activeResponse._id}
+          statusCode={activeResponse.statusCode}
+          enabled={settings.enableResponseAnimations}
+        />
+      )}
       {!activeResponse ? null : (
         <PaneHeader className="row-spaced">
           <div aria-atomic="true" aria-live="polite" className="no-wrap scrollable scrollable--no-bars pad-left">
