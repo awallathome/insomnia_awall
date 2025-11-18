@@ -119,6 +119,13 @@ export interface Settings {
 
   /** If true, Insomnia will send anonymous data about features and plugins used. */
   enableAnalytics: boolean;
+  
+  /** If true, show animated emojis when API requests complete based on response status code. */
+  enableResponseAnimations: boolean;
+  
+  /** If true, respect OS-level "reduce motion" accessibility setting and disable animations. */
+  respectReducedMotion: boolean;
+  
   filterResponsesByEnv: boolean;
   followRedirects: boolean;
   fontInterface: string | null;

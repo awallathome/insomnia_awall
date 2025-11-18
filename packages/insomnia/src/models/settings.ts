@@ -37,6 +37,8 @@ export function init(): BaseSettings {
     enableKeyMapForInlineTextEditors: false,
     editorLineWrapping: true,
     enableAnalytics: true,
+    enableResponseAnimations: true,
+    respectReducedMotion: true,
     showVariableSourceAndValue: false,
     filterResponsesByEnv: false,
     followRedirects: true,

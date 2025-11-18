@@ -553,3 +553,19 @@ export const REALTIME_EVENTS_CHANNELS = {
   NEW_EVENT: 'newEventReceived',
   MCP_NOTIFICATION: 'mcpNotification',
 };
+
+// Response Code Celebration Animations - Emoji Sets
+// These emojis provide visual feedback based on HTTP response status codes
+// Design: Fleeting, whimsical, and nonintrusive to the workspace
+export const RESPONSE_CELEBRATION_EMOJIS = {
+  SUCCESS: {
+    // Balloons float upward (2xx success)
+    balloons: ['🎈'],
+    // Confetti falls downward (2xx success)
+    confetti: ['🎉', '🎊', '✨', '🌟', '💫', '❤️', '💥'],
+  },
+  // Confused emojis spiral downward (4xx client errors)
+  CLIENT_ERROR: ['🤔', '😕', '❓', '🤷', '😳', '👀', '🧐'],
+  // Frustrated emojis fall straight down (5xx server errors)
+  SERVER_ERROR: ['😭', '😤', '😡', '💢', '💔', '😩', '😫', '🔥'],
+} as const;

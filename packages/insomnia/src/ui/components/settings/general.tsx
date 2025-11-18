@@ -45,6 +45,11 @@ export const General: FC = () => {
             help="If checked, reveals the environment variable source and value in the template tag. Otherwise, hover over the template tag to see the source and value."
             setting="showVariableSourceAndValue"
           />
+          <BooleanSetting
+            label="Enable response code celebration animations"
+            help="Show animated emojis when API requests complete. Animations stop when you move your mouse."
+            setting="enableResponseAnimations"
+          />
         </div>
         <div>
           <BooleanSetting label="Reveal passwords" setting="showPasswords" />
