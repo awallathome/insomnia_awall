@@ -5,16 +5,16 @@
   "tasks": [
     {
       "label": "Insomnia: Compile Main",
-      "detail": "esbuild.entrypoints.ts",
+      "detail": "esbuild.main.ts",
       "type": "shell",
       "promptOnClose": false,
       "options": {
         "cwd": "${workspaceFolder}/packages/insomnia",
         "env": {
-          "NODE_ENV": "development"
+          "NODE_ENV": "development",
         }
       },
-      "command": "${workspaceRoot}/node_modules/.bin/esr esbuild.entrypoints.ts"
+      "command": "${workspaceRoot}/node_modules/.bin/esr esbuild.main.ts"
     },
     {
       "label": "Insomnia: Compile Renderer (Watch)",
@@ -24,7 +24,7 @@
       "options": {
         "cwd": "${workspaceFolder}/packages/insomnia",
         "env": {
-          "NODE_ENV": "development"
+          "NODE_ENV": "development",
         }
       },
       "isBackground": true,
